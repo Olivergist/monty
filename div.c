@@ -7,7 +7,11 @@
 void f_div(stack_t **head, unsigned int counter)
 {
 	stack_t *current = *head;
-	int stack_size = 0, result;
+	int stack_size = 0;
+	int result;
+	int divisor;
+	int dividend;
+
 
 	while (current)
 	{
@@ -24,8 +28,9 @@ void f_div(stack_t **head, unsigned int counter)
 		exit(EXIT_FAILURE);
 	}
 	current = *head;
-	int divisor = current->n;
-	int dividend = current->next->n;
+	divisor = current->n;
+	dividend = current->next->n;
+
 	if (divisor == 0)
 	{
 		fprintf(stderr, "L%d: division by zero\n", counter);

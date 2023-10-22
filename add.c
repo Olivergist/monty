@@ -9,6 +9,7 @@ void f_add(stack_t **head, unsigned int counter)
 {
 	stack_t *current = *head;
 	int stack_size = 0, result;
+	int operand1, operand2;
 
 	while (current)
 	{
@@ -26,8 +27,8 @@ void f_add(stack_t **head, unsigned int counter)
 	}
 
 	current = *head;
-	int operand1 = current->n;
-	int operand2 = current->next->n;
+	operand1 = current->n;
+	operand2 = current->next->n;
 
 	result = operand1 + operand2;
 	current->next->n = result;
