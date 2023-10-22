@@ -1,14 +1,16 @@
 #include "monty.h"
-bus_t bus = {NULL, NULL, NULL, 0};
 /**
  * main - monty code interpreter
- * @argc: number of command-line Arg
- * @argv: Array of command-line arg
- * Return: 0 on success
+ * getline - reads a line from a file descriptor
+ * @lineptr: reference to pointer to buffer
+ * @n: reference to size of buffer
+ * @stream: file stream
+ * Return: number
  */
 ssize_t getline(char **lineptr, size_t *n, FILE *stream);
 int main(int argc, char *argv[])
 {
+	bus_t bus = {NULL, NULL, NULL, 0};
 	char *content;
 	FILE *file;
 	size_t size = 0;
