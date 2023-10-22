@@ -1,4 +1,5 @@
 #include "monty.h"
+bus_t bus = {NULL, NULL, NULL, 0};
 /**
  * main - monty code interpreter
  * getline - reads a line from a file descriptor
@@ -10,7 +11,6 @@
 ssize_t getline(char **lineptr, size_t *n, FILE *stream);
 int main(int argc, char *argv[])
 {
-	bus_t bus = {NULL, NULL, NULL, 0};
 	char *content;
 	FILE *file;
 	size_t size = 0;
